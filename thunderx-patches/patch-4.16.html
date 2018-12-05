@@ -10,6 +10,62 @@
 </head>
 <body>
 <h2 id="backports-for-4.16-kernel-tree">Backports for 4.16 kernel tree</h2>
+<h3 id="tpm">TPM</h3>
+<table>
+<colgroup>
+<col width="11%"></col>
+<col width="13%"></col>
+<col width="13%"></col>
+<col width="62%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Release</th>
+<th>Upstream</th>
+<th>Backport</th>
+<th>Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>v4.17-rc1</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=fac37c628fd5">fac37c628fd5</a></td>
+<td><a href="https://github.com/cavium/thunderx-linux/commit/762d902dad3f">762d902dad3f</a></td>
+<td>ima: Fix Kconfig to select TPM 2.0 CRB interface</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usb">USB</h3>
+<table>
+<colgroup>
+<col width="11%"></col>
+<col width="13%"></col>
+<col width="13%"></col>
+<col width="62%"></col>
+</colgroup>
+<thead>
+<tr class="header">
+<th>Release</th>
+<th>Upstream</th>
+<th>Backport</th>
+<th>Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>v4.20-rc4</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=11644a765952">11644a765952</a></td>
+<td><a href="https://github.com/cavium/thunderx-linux/commit/b3510dcce0d1">b3510dcce0d1</a></td>
+<td>xhci: Add quirk to workaround the errata seen on Cavium Thunder-X2 Soc</td>
+</tr>
+<tr class="even">
+<td>v4.18-rc1</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=36b6857932f3">36b6857932f3</a></td>
+<td><a href="https://github.com/cavium/thunderx-linux/commit/e5c4b5cb36f4">e5c4b5cb36f4</a></td>
+<td>xhci: Allow more than 32 quirks</td>
+</tr>
+</tbody>
+</table>
 <h3 id="perf">perf</h3>
 <table>
 <colgroup>
@@ -253,8 +309,8 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>iommu/next</td>
-<td>bee60e94a1e2</td>
+<td>v4.20-rc1</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=bee60e94a1e2">bee60e94a1e2</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/4195eaef92cd">4195eaef92cd</a></td>
 <td>iommu/iova: Optimise attempts to allocate iova from 32bit address range</td>
 </tr>
@@ -345,114 +401,120 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>linux-ipmi/for-next</td>
-<td>10042504ed92</td>
+<td>v4.20-rc1</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=0711e8c1b457">0711e8c1b457</a></td>
+<td><a href="https://github.com/cavium/thunderx-linux/commit/d301f33fff94">d301f33fff94</a></td>
+<td>ipmi: Fix timer race with module unload</td>
+</tr>
+<tr class="even">
+<td>v4.20-rc1</td>
+<td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=10042504ed92">10042504ed92</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/f2d3a1745782">f2d3a1745782</a></td>
 <td>ipmi:ssif: Add support for multi-part transmit messages &gt; 2 parts</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.19-rc4</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=0745dde62835">0745dde62835</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/ddd6b87bd054">ddd6b87bd054</a></td>
 <td>ipmi: Fix I2C client removal in the SSIF driver</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.19-rc4</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=2512e40e48d2">2512e40e48d2</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/2955c155bb95">2955c155bb95</a></td>
 <td>ipmi: Rework SMI registration failure</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=e86ee2d44b44">e86ee2d44b44</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/40600363515c">40600363515c</a></td>
 <td>ipmi: Rework locking and shutdown for hot remove</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ac93bd0c9e16">ac93bd0c9e16</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/bfba2e299c93">bfba2e299c93</a></td>
 <td>ipmi: Fix some counter issues</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=2911c9886c8d">2911c9886c8d</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/df9444029009">df9444029009</a></td>
 <td>ipmi: Rename ipmi_user_t to struct ipmi_user *</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc4</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=2068db53b633">2068db53b633</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/edf7528320ce">edf7528320ce</a></td>
 <td>ipmi: Cleanup oops on initialization failure</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1211229399b3">1211229399b3</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/a33bdb8b38c8">a33bdb8b38c8</a></td>
 <td>ipmi_ssif: Fix uninitialized variable issue</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=93c303d2045b">93c303d2045b</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/4cd1ad6be388">4cd1ad6be388</a></td>
 <td>ipmi_si: Clean up shutdown a bit</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=6a0d23ed338e">6a0d23ed338e</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/702985a40e68">702985a40e68</a></td>
 <td>ipmi: ipmi_unregister_smi() cannot fail, have it return void</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=7960f18a5647">7960f18a5647</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/9908249568b0">9908249568b0</a></td>
 <td>ipmi_si: Convert over to a shutdown handler</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.17-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=71404a2f75c1">71404a2f75c1</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/e6b426eab6f4">e6b426eab6f4</a></td>
 <td>ipmi: Consolidate cleanup code</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.17-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=cc095f0ac1f7">cc095f0ac1f7</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/c089191f2f0e">c089191f2f0e</a></td>
 <td>ipmi: Fix some error cleanup issues</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f0258c95304e">f0258c95304e</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/5d733761ce32">5d733761ce32</a></td>
 <td>ipmi_ssif: Remove usecount handling</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=a313dec6401f">a313dec6401f</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/332a926ee532">332a926ee532</a></td>
 <td>ipmi_ssif: Convert over to a shutdown handler</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=a567b6230066">a567b6230066</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/a549d292b669">a549d292b669</a></td>
 <td>ipmi: Change ipmi_smi_t to struct ipmi_smi *</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.18-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=b7780dab90e8">b7780dab90e8</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/6e6fa8bb5910">6e6fa8bb5910</a></td>
 <td>ipmi: Add shutdown functions for users and interfaces</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>v4.17-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4866b1dce038">4866b1dce038</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/9f56ba73b2c1">9f56ba73b2c1</a></td>
 <td>ipmi: Remove ACPI SPMI probing from the SSIF (I2C) driver</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>v4.17-rc1</td>
 <td><a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=f002612b9d86">f002612b9d86</a></td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/50fd8b4047cf">50fd8b4047cf</a></td>
@@ -688,12 +750,6 @@
 <td>none</td>
 <td><a href="https://github.com/cavium/thunderx-linux/commit/b34928b49a54">b34928b49a54</a></td>
 <td>kernel: crash: add handler for 'crashkernel=auto' value</td>
-</tr>
-<tr class="even">
-<td>ipmi</td>
-<td>38aee662f3dd</td>
-<td><a href="https://github.com/cavium/thunderx-linux/commit/5f9dbb82b758">5f9dbb82b758</a></td>
-<td>ipmi:ssif: Add support for multi-part transmit messages &gt; 2 parts</td>
 </tr>
 </tbody>
 </table>
